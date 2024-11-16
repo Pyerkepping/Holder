@@ -18,7 +18,7 @@ local function checkHWID()
     return true
 end
 
--- Check Key
+--[[ Check Key
 local function checkKey(userKey)
     local response = game:HttpGet(baseUrl .. "/init-key?key=" .. userKey)
     local success, result = pcall(function() 
@@ -32,14 +32,22 @@ local function checkKey(userKey)
     return true
 end
 
+]]
+
 -- Main authentication flow
 if checkHWID() then
     print("HWID Valid")
     
-    local userKey = "user-key-here" -- Replace with actual key input
+    --[[
+        
+        
+        local userKey = "user-key-here" -- Replace with actual key input
     if checkKey(userKey) then
         print("Access granted")
     end
+
+
+    ]]
 end
 
 --// Services //--
